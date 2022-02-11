@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.writeForm').on('submit', function () {
+                let input_value = $(this).children('.content_input').val();
+                console.log('content_input value =' + input_value);
+                if (input_value == null || input_value == '') {
+                    $('.input_null_error').css({ opacity: 0 }).animate({ opacity: 1 }, 1200);
+                    $('.input_null_error').css({ opacity: 1 }).animate({ opacity: 0 }, 700);
+                    return false;
+                } else {
+                    $(".WriteMain").append('<div class="append_item">' + input_value + '</div>');
+                }
+            });
+        });
+    </script>
+    <style>
+        .content_input {
+            min-width: 365px;
+            padding: 11px 60px 11px 20px;
+            min-height: 44px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: text;
+            margin-bottom: 5px;
+        }
+
+        .content_input:focus {
+            border-color: #555;
+            box-shadow: 2px 2px 6px rgb(0 0 0 / 15%);
+            outline: 0;
+        }
+
+        .WriteMain {
+            min-width: 370px;
+            margin: 120px 10%;
+        }
+
+        .writeForm {
+            padding-top: 20px;
+        }
+
+        .append_item {
+            text-align: center;
+            border: 1px solid #ddd;
+            width: 300px;
+            padding: 10px 5px;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .input_null_error {
+            position: absolute;
+            padding: 6px;
+            width: 140px;
+            border: 1px solid #ff3434;
+            border-radius: 20px;
+            background-color: #ff3434;
+            z-index: 1041;
+            overflow: auto;
+            top: 10%;
+            left: 29%;
+            color: white;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="WriteMain">
+        <div class="input_null_error" style="opacity: 0;">내용을 입력하세요.</div>
+        <form class="writeForm" onsubmit="return false;">
+            <input type="text" name="content" class="content_input" placeholder="Input null check!!">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+
+
+
+</body>
+
+</html>
