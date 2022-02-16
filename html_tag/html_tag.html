@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+            width: 120px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        #Explanation {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 10px;
+            display: block;
+            width: 420px;
+            margin-bottom: 5px;
+        }
+
+        progress[value]::-webkit-progress-bar {
+            background-color: whitesmoke;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+        }
+
+        #progress_css[value] {
+            appearance: none;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        #progress_css[value]::-webkit-progress-value {
+            background-image: linear-gradient(to left, #2ecc71, #3498db);
+        }
+
+        details {
+            cursor: pointer;
+            width: 200px;
+        }
+
+        #details_css[open] {
+            background-color: #3498db;
+            background-image: linear-gradient(319deg,
+                    #cdedfd 0%,
+                    #ffec82 47%,
+                    #ffcfd2 100%);
+        }
+    </style>
+    <script>
+        function value_20() {
+            document.getElementById('progress_css').value = '20';
+        }
+        function value_40() {
+            document.getElementById('progress_css').value = '40';
+        }
+        function value_60() {
+            document.getElementById('progress_css').value = '60';
+        }
+        function value_80() {
+            document.getElementById('progress_css').value = '80';
+        }
+        function value_100() {
+            document.getElementById('progress_css').value = '100';
+        }
+    </script>
+</head>
+
+<body>
+    <p>progress 태그</p>
+    <span id="Explanation">진행 정도를 나타냄</span>
+    <progress value="50" min="0" max="100"></progress>
+    <progress value="20" min="0" max="100"></progress>
+    <progress value="80" min="0" max="100"></progress>
+    <progress value="50" min="0" max="100" id="progress_css"></progress>
+    <button onclick="value_20()">20</button>
+    <button onclick="value_40()">40</button>
+    <button onclick="value_60()">60</button>
+    <button onclick="value_80()">80</button>
+    <button onclick="value_100()">100</button>
+
+    <p>meter 태그</p>
+    <span id="Explanation">사용자에게 값의 수준을 보여주고 값이 높고 낮을 때에 따라 색상이 바뀜<br><strong>progress와 차이점</strong><br>작업의 진행상황은 전달하지
+        않음, 값의 상태만 전달</span>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="20"></meter>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="40"></meter>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="60"></meter>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="80"></meter>
+
+    <p>details 태그</p>
+    <span id="Explanation">사용자가 직접 조작하여 보거나 숨길 수 있는 부가적인 세부사항을 명시할 때 사용</span>
+    <details>
+        <summary>details 태그!!</summary>
+        <span>abc</span>
+    </details>
+    <details id="details_css">
+        <summary>details 태그!! css</summary>
+        <span>details태그 css</span>
+    </details>
+
+    <p>datalist 태그</p>
+    <span id="Explanation">입력창에 타이핑을 하면, option 목록에 일치하는 값을 찾아서 자동완성 기능제공</span>
+    <label for="color">what is your favorite color?</label>
+    <input type="text" list="color-options" />
+    <datalist id="color-options">
+        <option value="red" />
+        <option value="blue" />
+        <option value="green" />
+        <option value="yellow" />
+        <option value="orange" />
+        <option value="pink" />
+        <option value="grey" />
+        <option value="white" />
+        <option value="black" />
+    </datalist>
+
+    <p>picture 태그</p>
+    <span id="Explanation">너비에 따라 커지거나 작아지는 하나의 이미지를 사용하는 대신 서로 다른 디스플레이나 기기에서 해당 뷰포트에 알맞게 채워질 수 있도록 여러 개의 이미지 중에서 적절한
+        이미지를 사용할 수 있도록 함<br><strong> min-width:1000px => imgsrc/img1.jpg <br>min-width:900px =>
+            imgsrc/img2.jpg</strong></span>
+    <picture>
+        <source srcset="imgsrc/img1.jpg" media="(min-width:1000px)" />
+        <source srcset="imgsrc/img2.jpg" media="(min-width:900px)" />
+        <img src="imgsrc/img3.jpg" width="300" height="300">
+    </picture>
+
+</body>
+
+</html>
