@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content1 {
+            width: 200px;
+            height: 300px;
+            position: relative;
+            margin: 0 auto;
+            padding: 5px 0 5px 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .content_box1 {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .content_box2 {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 5px;
+            border: 1px solid #ddd;
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin-bottom: 20px;
+        }
+
+        .content_box3 {
+            width: 600px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 5px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .content_box1::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        .content_box1::-webkit-scrollbar-button {
+            height: 3px;
+        }
+
+        .content_box1::-webkit-scrollbar-thumb {
+            background: #999;
+            border: 1px solid #999;
+            border-radius: 50px;
+        }
+
+        .content_box1::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 50px;
+        }
+
+        .cover_bar {
+            width: 7px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            -webkit-transition: all .5s;
+            opacity: 1;
+            background-color: white;
+        }
+
+        .content1:hover .cover_bar {
+            opacity: 0;
+            -webkit-transition: all .5s;
+        }
+
+        .content_box2::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .content_box2::-webkit-scrollbar-button {
+            width: 3px;
+        }
+
+        .content_box2::-webkit-scrollbar-thumb {
+            background: linear-gradient(90.64deg, #6900EE 0%, #E600A5 100%), #7D6AC4;
+            border: 1px solid #999;
+            border-radius: 50px;
+        }
+
+        .content_box2::-webkit-scrollbar-track {
+            background: transparent;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content1">
+        <div class="content_box1">
+            장고(Django)는 파이썬으로 작성된 오픈 소스 웹 프레임워크로, 모델-뷰-컨트롤러(MVC) 패턴을 따르고 있다. 현재는 장고 소프트웨어 재단에 의해 관리되고 있다.<br>
+            고도의 데이터베이스 기반 웹사이트를 작성하는 데 있어서 수고를 더는 것이 장고의 주된 목표이다. 장고는 콤포넌트의 재사용성(reusability)과 플러그인화 가능성(pluggability),
+            빠른
+            개발 등을 강조하고 있다. <br>
+            또한, "DRY(Don't repeat yourself: 중복배제)" 원리를 따랐다. 설정 파일부터 데이터 모델에까지 파이썬 언어가 구석구석에 쓰였다.<br>
+            장고는 웹 개발에서 번거로운 요소들을 새로 개발할 필요 없이 내장된 기능만을 이용해 빠른 개발을 할 수 있다는 장점이 있다.
+        </div>
+        <div class="cover_bar"></div>
+    </div>
+    <div class="content_box2">
+        장고(Django)는 파이썬으로 작성된 오픈 소스 웹 프레임워크로, 모델-뷰-컨트롤러(MVC) 패턴을 따르고 있다. 현재는 장고 소프트웨어 재단에 의해 관리되고 있다.<br>
+        고도의 데이터베이스 기반 웹사이트를 작성하는 데 있어서 수고를 더는 것이 장고의 주된 목표이다.<br>
+        장고는 콤포넌트의 재사용성(reusability)과 플러그인화 가능성(pluggability),
+        빠른 개발 등을 강조하고 있다. <br>
+        또한, "DRY(Don't repeat yourself: 중복배제)" 원리를 따랐다. 설정 파일부터 데이터 모델에까지 파이썬 언어가 구석구석에 쓰였다.<br>
+        장고는 웹 개발에서 번거로운 요소들을 새로 개발할 필요 없이 내장된 기능만을 이용해 빠른 개발을 할 수 있다는 장점이 있다.
+    </div>
+
+    <div class="content_box3">
+        ::-webkit-scrollbar : 스크롤바 전체<br>
+        ::-webkit-scrollbar-button : 화살표 버튼<br>
+        ::-webkit-scrollbar-thumb : 스크롤 막대<br>
+        ::-webkit-scrollbar-track : 스크롤 막대 외부<br>
+        ::-webkit-scrollbar-corner : 좌우 상하 스크롤바 만날 때 오른쪽 아래 공간<br>
+        ::-webkit-resizer-corner : 공간으로 크기 변경 가능<br>
+    </div>
+</body>
+
+</html>
