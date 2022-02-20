@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- chart.js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./chart_css.css">
+</head>
+
+<body>
+    <div class="test1">
+        <canvas id="myChart"></canvas>
+    </div>
+    <div id="div1"><span>차트에 label 지우기</span>
+        <pre>
+            options: {<br>
+                plugins: {<br>
+                    legend: {<br>
+                        display: false,<br>
+                    }<br>
+                }<br>
+            }<br>
+        </pre>
+    </div>
+    <div class="test1">
+        <canvas id="chart1"></canvas>
+    </div>
+    <div class="test3">
+        <span id="span1">프로젝트1 업무 리포트(bar)</span>
+        <canvas id="chart2"></canvas>
+    </div>
+    <div class="test4">
+        <span id="span1">프로젝트1 업무 리포트(doughnut)</span>
+        <canvas id="chart3"></canvas>
+    </div>
+    <div class="test4 test5">
+        <span id="span1">프로젝트1 업무 리포트(pie)</span>
+        <canvas id="chart4"></canvas>
+    </div>
+    <div class="test2">
+        <span id="span1">프로젝트1 월별 업무 리포트(bar)</span>
+        <canvas id="chart5"></canvas>
+    </div>
+</body>
+<!-- js -->
+<script rel="script" src="./chart_script.js"></script>
+
+</html>
