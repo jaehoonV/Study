@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var frm = document.frm;
+            $("#frm").validate({
+                rules: {
+                    userName: {
+                        required: true,
+                        rangelength: [2, 10]
+                    },
+                    userEmail: {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    userName: {
+                        required: "이름은 필수 입력입니다.",
+                        rangelength: "이름은 {0}자에서 {1}자까지 사용 가능합니다."
+                    },
+                    userEmail: {
+                        required: "이메일은 필수 입력입니다.",
+                        email: "이메일 형식을 확인하세요."
+                    }
+                },
+                submitHandler: function () {
+                    frm.submit();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="form_div">
+        <form id="frm" name="frm" action="ex.html" method="GET">
+            <label for="userName">이름 : </label>
+            <input type="text" name="userName" id="userName" placeholder="2~10 글자" /><br />
+            <label for="">이메일</label>
+            <input type="text" name="userEmail" id="userEmail" /><br />
+
+            <input type="submit" value="submit" />
+        </form>
+    </div>
+</body>
+
+</html>
