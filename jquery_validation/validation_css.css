@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+#form_div {
+    width: 500px;
+    height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 40px auto 20px auto;
+}
+
+#text_box {
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 20px auto 20px auto;
+    font-size: 1.2em;
+}
+
+#strong {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#userPassword {
+    width: 200px;
+}
+
+/* input 태그에 클래스가 error 인 요소 */
+input.error {
+    border: 1px solid red;
+}
+
+/* label 태그에 클래스가 error 인 요소 */
+label.error {
+    color: red;
+}

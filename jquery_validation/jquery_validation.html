@@ -8,50 +8,58 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var frm = document.frm;
-            $("#frm").validate({
-                rules: {
-                    userName: {
-                        required: true,
-                        rangelength: [2, 10]
-                    },
-                    userEmail: {
-                        required: true,
-                        email: true
-                    }
-                },
-                messages: {
-                    userName: {
-                        required: "이름은 필수 입력입니다.",
-                        rangelength: "이름은 {0}자에서 {1}자까지 사용 가능합니다."
-                    },
-                    userEmail: {
-                        required: "이메일은 필수 입력입니다.",
-                        email: "이메일 형식을 확인하세요."
-                    }
-                },
-                submitHandler: function () {
-                    frm.submit();
-                }
-            });
-        });
-    </script>
+    <!-- css -->
+    <link rel="stylesheet" href="validation_css.css">
 </head>
 
 <body>
     <div id="form_div">
-        <form id="frm" name="frm" action="ex.html" method="GET">
-            <label for="userName">이름 : </label>
-            <input type="text" name="userName" id="userName" placeholder="2~10 글자" /><br />
+        <form id="frm" name="frm" action="url_paramGet.html" method="GET">
+            <label for="userName">이름</label>
+            <input type="text" name="userName" id="userName" placeholder="2~10 글자" /><br>
             <label for="">이메일</label>
-            <input type="text" name="userEmail" id="userEmail" /><br />
+            <input type="text" name="userEmail" id="userEmail" placeholder="123@123" /><br>
+            <label for="userPhone">전화번호</label>
+            <input type="text" name="userPhone" id="userPhone" placeholder="010-0000-0000" /><br>
+            <label for="userPassword">비밀번호</label>
+            <input type="password" name="userPassword" id="userPassword" placeholder="영문, 숫자, 특수문자 포함 (8~15)" /><br>
 
-            <input type="submit" value="submit" />
+            <span>
+                <label for="male">남성</label>
+                <input type="radio" name="userGender" value="male" id="male" />
+                <label for="female">여성</label>
+                <input type="radio" name="userGender" value="female" id="female" />
+            </span><br>
+            <button type="submit" id="submit">submit</button>
         </form>
     </div>
+    <div id="text_box">
+        <span id="strong">validate() 함수</span><br>
+        rules : 검증할 규칙 정의<br>
+        messages : 검증 실패시 메시지<br>
+        submithandler : 검증 성공시 다음 처리, ajax로 submit 처리
+        <br>
+        <br>
+        ★ rules 사용 옵션<br>
+        - required : 필수 입력 엘리먼트입니다.<br>
+        - remote : 엘리먼트의 검증을 지정된 다른 자원에 ajax 로 요청합니다.<br>
+        - minlength : 최소 길이를 지정합니다.<br>
+        - maxlength : 최대 길이를 지정합니다.<br>
+        - rangelength : 길이의 범위를 지정합니다.<br>
+        - min : 최소값을 지정합니다.<br>
+        - max : 최대값을 지정합니다.<br>
+        - range : 값의 범위를 지정합니다.<br>
+        - step : 주어진 단계의 값을 가지도록 합니다.<br>
+        - email : 이메일 주소형식으 가지도록 합니다.<br>
+        - url : url 형식을 가지도록 합니다.<br>
+        - date : 날짜 형식을 가지도록 합니다.<br>
+        - dateISO : ISO 날짜 형식을 가지도록 합니다.<br>
+        - number : 10진수를 가지도록 합니다.<br>
+        - digits : 숫자 형식을 가지도록 합니다.<br>
+        - equalTo : 엘리먼트가 다른 엘리먼트와 동일해야 합니다.
+    </div>
+    <!-- js -->
+    <script rel="script" src="validation_script.js"></script>
 </body>
 
 </html>

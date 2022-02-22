@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 5px;
+            margin: 40px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        your name = <span id="name_value"></span><br>
+        your email = <span id="email_value"></span><br>
+        your phone = <span id="phone_value"></span><br>
+        your password = <span id="password_value"></span><br>
+        your gender = <span id="gender_value"></span>
+    </div>
+</body>
+
+<script>
+    let query = window.location.search;
+    let param = new URLSearchParams(query);
+
+    let val1 = param.get("userName");
+    let val2 = param.get("userEmail");
+    let val3 = param.get("userPhone");
+    let val4 = param.get("userPassword");
+    let val5 = param.get("userGender");
+
+    document.getElementById("name_value").innerHTML = val1;
+    document.getElementById("email_value").innerHTML = val2;
+    document.getElementById("phone_value").innerHTML = val3;
+    document.getElementById("password_value").innerHTML = val4;
+    document.getElementById("gender_value").innerHTML = val5;
+
+</script>
+
+</html>
