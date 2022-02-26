@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app version="4.0"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee  
+http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+	<!-- db -->
+	<resource-ref>
+		<description>Oracle Datasource example</description>
+		<res-ref-name>jdbc/myoracle</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	
+	<!-- 특정 기능(패스워드 변경 등)을 수행하는 경우 로그인 여부를 체크하는 필터 등록 -->
+	<filter>
+		<filter-name>LoginCheckFilter</filter-name>
+		<filter-class>filter.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginCheckFilter</filter-name>
+		<url-pattern>/changePwd.do</url-pattern>
+		<url-pattern>/write.do</url-pattern>
+	</filter-mapping>
+	
+	<!-- request를 처리할 handler를 commandHandlerURI.properties에서 읽어서 매핑하고 전달하는 
+		서블릿 등록 -->
+	<servlet>
+		<servlet-name>ControllerUsingURI</servlet-name>
+		<servlet-class>mvc.controller.ControllerUsingURI</servlet-class>
+		<init-param>
+			<param-name>configFile</param-name>
+			<param-value>
+                /WEB-INF/commandHandlerURI.properties
+            </param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ControllerUsingURI</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+</web-app>
