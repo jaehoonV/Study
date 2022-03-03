@@ -22,9 +22,8 @@ Compiler VS Interpreter
 |실행 속도|빠름|느림|
 |보안|프로그램의 코드가 유출되지 않음|프로그램의 코드가 유출될 수 있음|
 |파일 용량|프로그램의 실행 파일 전체를 전송해야 하므로 용량이 큼|프로그램의 코드만 전송하면 실행이 되므로 용량이 작음|
-|프로그래밍 언어|C, C++처럼 비교적 저수준에 가까운 언어|Python, Ruby처럼 비교적 고수준에 가까운 언어|
-</br>
-</br>
-</br>
+|프로그래밍 언어&nbsp;&nbsp;&nbsp;|C, C++처럼 비교적 저수준에 가까운 언어|Python, Ruby처럼 비교적 고수준에 가까운 언어|
+</br></br></br>
 ***
+
 참조 링크: [https://velog.io/@jaeyunn_15/OS-Compiler-vs-Interpreter]
