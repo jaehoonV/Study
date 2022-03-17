@@ -30,17 +30,16 @@ public class Remove_Element {
 		
 		int[] input = {0,1,2,2,3,0,4,2};
 		int	val = 2;
-		int count = 0;
 		
-		for(int i = 0; i <input.length; i ++) {
-			if(input[i] == val) {
-				count++;
+		int i = 0;
+		for (int n : input) {
+			if (n != val) {
+				input[i++] = n;
 			}
 		}
-		
-		int output = input.length - count;
-		
-		System.out.println(output);
-		
+		System.out.println(i);
+		for(int j = 0; j < input.length; j++) {
+		System.out.print(input[j] + " ");
+		}
 	}
 }
