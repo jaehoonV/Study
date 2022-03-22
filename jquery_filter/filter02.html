@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <button onclick="check()">입장 자격 체크</button>
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        var persons = [19, 33, 55, 12, 6, 71, 11, 47, 28];
+
+        function check() {
+            var result = persons.filter(checkAdult);
+            console.log(result);
+            $.each(result, function (i, v) {
+                $('#list').append($('<li>').text(v));
+            });
+        }
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+    </script>
+</body>
+
+</html>
