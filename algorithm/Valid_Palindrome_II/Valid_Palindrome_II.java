@@ -23,7 +23,6 @@ public class Valid_Palindrome_II {
 	public static void main(String[] args) {
 		String s = "abca";
 		//String s = "abc";
-		
 		System.out.println(validPalindrome(s));
 	}
 
