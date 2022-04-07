@@ -33,6 +33,7 @@ priorityQueue.peek();     // priorityQueue에 첫번째 값 참조 = 1
 * 큐에 값을 추가하고 싶다면 add(value) 또는 offer(value)라는 메서드를 사용
 * add(value) 메서드의 경우 만약 삽입에 성공하면 true를 반환하고, 큐에 여유 공간이 없어 삽입에 실패하면 IllegalStateException을 발생시킴
 * Priority Queue에서 우선순위가 가장 높은 값을 참조하고 싶다면 peek()라는 메서드를 사용
+***
 
 ### Priority Queue 값 삭제
 ```
@@ -44,3 +45,6 @@ priorityQueue.clear();      // priorityQueue에 초기화
 * 값을 제거할 시 우선순위가 가장 높은 값이 제거됨. 
 * poll() 함수는 우선순위 큐가 비어있으면 null을 반환
 * 큐의 모든 요소를 제거하려면 clear() 메서드를 사용
+***
+</br></br></br>
+참조 링크: [https://coding-factory.tistory.com/603], [https://crazykim2.tistory.com/575]
