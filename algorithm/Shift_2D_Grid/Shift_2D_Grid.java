@@ -14,8 +14,16 @@ public class Shift_2D_Grid {
 //		int k = 23;
 
 		List<List<Integer>> output = shiftGrid(grid, k);
+		List<List<Integer>> output2 = shiftGrid2(grid, k);
 
 		for (List<Integer> data : output) {
+			for (int d : data) {
+				System.out.print(d);
+			}
+			System.out.println();
+		}
+		System.out.println("----- output2 -----");
+		for (List<Integer> data : output2) {
 			for (int d : data) {
 				System.out.print(d);
 			}
@@ -53,4 +61,16 @@ public class Shift_2D_Grid {
 
 		return shift_list_output;
 	}
+	
+	public static List<List<Integer>> shiftGrid2(int[][] grid, int k) {
+        int m = grid.length, n = grid[0].length, tot = m * n;
+        List<List<Integer>> res= new ArrayList<>();
+        k = k % tot;
+        for (int i = 0; i < m; i++) res.add(new ArrayList<>());
+        for (int l = 0; l < tot; l++) {
+            int idx = (l - k + tot) % tot; // shift
+            res.get(l / n).add(grid[idx / n][idx % n]);
+        }
+        return res;
+    }
 }
