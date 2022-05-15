@@ -1,7 +1,7 @@
-let searchResultColNames = ['게시글관리번호', '번호', '제목', '작성자', '날짜'];
+let searchResultColNames = ['게시글 관리번호', '번호', '제목', '작성자', '날짜'];
 let searchResultColModel = [
-   { name: 'bbsMgtNo', index: 'bbsMgtNo', align: 'center', hidden: true },
-   { name: 'bbsNum', index: 'bbsNum', align: 'left', width: '12%' },
+   { name: 'bbsMgtNo', index: 'bbsMgtNo', align: 'center', width: '15%' },
+   { name: 'bbsNum', index: 'bbsNum', align: 'center', width: '5%' },
    { name: 'bbsTitle', index: 'bbsTitle', align: 'center', width: '50%' },
    { name: 'bbsWriter', index: 'bbsWriter', align: 'center', width: '14%' },
    { name: 'bbsDate', index: 'bbsDate', align: 'center', width: '12%' },
@@ -25,11 +25,68 @@ $(function () {
    $("#mainGrid").jqGrid({
       datatype: "local",
       data: ex_data,
-      height: 261,
-      width: 1019,
+      height: 225,
+      width: 800,
       colNames: searchResultColNames,
       colModel: searchResultColModel,
       rowNum: 10,
       pager: "pager"
+   });
+});
+
+let dataArray = [
+   {
+      "name": "Lorene Battle",
+      "phone": "(936) 574-3976"
+   },
+   {
+      "name": "Wendi Downs",
+      "phone": "(815) 510-3017"
+   },
+   {
+      "name": "Wendi Downs",
+      "phone": "(815) 510-3017"
+   },
+   {
+      "name": "Wendi Downs",
+      "phone": "(815) 510-3017"
+   },
+   {
+      "name": "Wendi Downs",
+      "phone": "(815) 510-3017"
+   },
+   {
+      "name": "Wendi Downs",
+      "phone": "(815) 510-3017"
+   },
+   {
+      "name": "Wendi Downs",
+      "phone": "(815) 510-3017"
+   }
+];
+
+$(document).ready(function () {
+   $("#list").jqGrid({
+      datatype: 'local',
+      styleUI: 'Foundation',
+      data: dataArray,
+      colModel: [
+         { name: 'name', label: 'Name', align: 'center' },
+         { name: 'phone', label: 'Phone Number', align: 'center' }
+      ],
+      caption: 'Users Grid',
+      height: 'auto',
+      width: 900,
+      rowNum: 5,
+      sortname: 'phone',
+      viewrecords: true,
+      headertitles: true,
+      emptyrecords: '데이터가 없습니다.',
+      multiselect: true,
+      // multiselectWidth: 20,
+      multiboxonly: true,
+      viewsortcols: [true, 'vertical', true],
+      sortable: true,
+      pager: '#pager1'
    });
 });
