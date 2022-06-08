@@ -190,7 +190,6 @@
    .title_field {
       font-size: 10pt;
       font-weight: 700;
-      border
    }
 
    .input_field {
@@ -294,6 +293,13 @@
       height: 35px;
    }
 
+   .border1 {
+      border: 1px;
+      border-style: solid;
+      border-color: black;
+      height: 20px;
+   }
+
    .l_border {
       border-left: 1px;
       border-style: solid;
@@ -336,7 +342,7 @@
       text-align: center;
    }
 
-   /*다인 양식*/
+   /* 양식*/
    .main_title2 {
       font-size: 25px;
       color: black;
@@ -405,7 +411,7 @@
       margin-top: 20px;
    }
 
-   /*다인 양식*/
+   /* 양식*/
 
    tr th {
       display: none;
@@ -413,7 +419,7 @@
 </style>
 <div class="a4 print_wrap" contenteditable="false">
    <div id="doc_area_0">
-      <div class="main_title2 ta_center"><span>지출결의서(공통)</span></div>
+      <div class="main_title2 ta_center"><span></span></div>
 
       <div class="header">
          <div class="corner_all">
@@ -477,13 +483,13 @@
                   </tr>
                   <tr>
                      <td class="all_border ta_center" colspan="1">제&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;목</td>
-                     <td class="all_border" colspan="7"><span class="tmp_doc_title">지출결의서(토펙엔지니어링)</span></td>
+                     <td class="all_border" colspan="7"><span class="tmp_doc_title">{{제목}}</span></td>
                   </tr>
                   <tr>
                      <td class="all_border contents_td" colspan="8" style="height:200px">
                         <div class="f_field input_field" contenteditable="true"
                            style="height: 150px; font-size:13px; margin-bottom:10px; margin-top:10px; padding-left:20px">
-                           <p>세부내역</p>
+                           <p>세&nbsp;부&nbsp;내&nbsp;역</p>
                         </div>
 
                         <table class="fixTableWidth" id="form2_list" style="width:715px">
@@ -498,13 +504,19 @@
                            </colgroup>
                            <thead>
                               <tr>
-                                 <td class="all_border ta_center">순<br />번</td>
-                                 <td class="all_border ta_center">PJ명</td>
+                                 <td class="all_border ta_center" rowspan="2">순<br /><br />번</td>
+                                 <td class="all_border ta_center">계정코드</td>
+                                 <td class="all_border ta_center">계정과목명</td>
+                                 <td class="all_border ta_center">프로젝트코드</td>
+                                 <td class="all_border ta_center" colspan="3">프로젝트명</td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border ta_center" colspan="3">
+                                    적&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;요
+                                 </td>
                                  <td class="all_border ta_center">공급가액</td>
                                  <td class="all_border ta_center">세액</td>
                                  <td class="all_border ta_center">합계</td>
-                                 <td class="all_border ta_center">적요</td>
-                                 <td class="all_border ta_center">예금주/계좌번호</td>
                               </tr>
                               <tr class="tmp_headrow_first">
                                  <th class="tmp_issue_dt">&nbsp;</th>
@@ -530,46 +542,225 @@
                            </thead>
                            <tbody>
                               <tr>
-                                 <td class="all_border form2_job_class_nm ta_center">&nbsp;</td>
-                                 <td class="all_border form2_pay ta_right">&nbsp;</td>
-                                 <td class="all_border form2_day">&nbsp;</td>
-                                 <td class="all_border form2_cnt">&nbsp;</td>
-                                 <td class="all_border form2_tot_cost">&nbsp;</td>
-                                 <td class="all_border form2_tot_rate">&nbsp;</td>
-                                 <td class="all_border form2_memo">&nbsp;</td>
+                                 <td class="all_border" rowspan="2">&nbsp;1</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border tmp_pj_name_0 ui_tmp_pj_name" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                 &nbsp;</pre>
+                                 </td>
                               </tr>
                               <tr>
-                                 <td class="all_border form2_job_class_nm ta_center">&nbsp;</td>
-                                 <td class="all_border form2_pay ta_right">&nbsp;</td>
-                                 <td class="all_border form2_day ta_right">&nbsp;</td>
-                                 <td class="all_border form2_cnt ta_right">&nbsp;</td>
-                                 <td class="all_border form2_tot_cost ta_right">&nbsp;</td>
-                                 <td class="all_border form2_tot_rate">&nbsp;</td>
-                                 <td class="all_border form2_memo">&nbsp;</td>
+                                 <td class="all_border tmp_note_0 ui_tmp_note" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                 &nbsp;</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost1_0 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                 </pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_0 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                 </pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_0 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                 </pre>
+                                 </td>
                               </tr>
                               <tr>
-                                 <td class="all_border form2_job_class_nm ta_center">&nbsp;</td>
-                                 <td class="all_border form2_pay ta_right">&nbsp;</td>
-                                 <td class="all_border form2_day ta_right">&nbsp;</td>
-                                 <td class="all_border form2_cnt ta_right">&nbsp;</td>
-                                 <td class="all_border form2_tot_cost ta_right">&nbsp;</td>
-                                 <td class="all_border form2_tot_rate">&nbsp;</td>
-                                 <td class="all_border form2_memo">&nbsp;</td>
+                                 <td class="all_border" rowspan="2">&nbsp;2</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border tmp_pj_name_0 ui_tmp_pj_name" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
                               </tr>
                               <tr>
-                                 <td class="all_border form2_job_class_nm ta_center" colspan="2">총합계</td>
-                                 <td class="all_border form2_day ta_right">&nbsp;</td>
-                                 <td class="all_border form2_cnt ta_right">&nbsp;</td>
-                                 <td class="all_border form2_tot_cost ta_right">&nbsp;</td>
-                                 <td class="all_border form2_tot_rate ta_right">&nbsp;</td>
-                                 <td class="all_border form2_memo">&nbsp;</td>
+                                 <td class="all_border tmp_note_0 ui_tmp_note" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost1_0 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_0 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_0 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border" rowspan="2">&nbsp;3</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border tmp_pj_name_0 ui_tmp_pj_name" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border tmp_note_0 ui_tmp_note" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost1_0 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_0 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_0 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border" rowspan="2">&nbsp;4</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border tmp_pj_name_0 ui_tmp_pj_name" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border tmp_note_0 ui_tmp_note" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost1_0 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_0 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_0 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border" rowspan="2">&nbsp;5</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border tmp_pj_name_0 ui_tmp_pj_name" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border tmp_note_0 ui_tmp_note" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost1_0 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_0 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_0 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border" rowspan="2">&nbsp;6</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border tmp_pj_name_0 ui_tmp_pj_name" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border tmp_note_0 ui_tmp_note" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost1_0 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_0 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_0 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border" rowspan="2">&nbsp;7</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border">&nbsp;</td>
+                                 <td class="all_border tmp_pj_name_0 ui_tmp_pj_name" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border tmp_note_0 ui_tmp_note" colspan="3">
+                                    <pre style="white-space:pre-wrap; word-break:break-all">
+                                                               &nbsp;</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost1_0 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_0 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_0 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                                               </pre>
+                                 </td>
+                              </tr>
+
+                              <tr>
+                                 <td class="all_border tmp_issue_dt_5 ui_tmp_issue_dt ta_center" colspan="4">
+                                    합&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;계
+                                 </td>
+                                 <td class="all_border tmp_cost1_5 ui_tmp_cost1">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                 10,000</pre>
+                                 </td>
+                                 <td class="all_border tmp_cost2_5 ui_tmp_cost2">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                 0</pre>
+                                 </td>
+                                 <td class="all_border tmp_tot_cost_5 ui_tmp_tot_cost">
+                                    <pre style="text-align:right; white-space:pre-wrap; word-break:break-all">
+                                 10,000</pre>
+                                 </td>
                               </tr>
                            </tbody>
                         </table>
                      </td>
                   </tr>
                   <tr>
-                     <td class="all_border ta_center" colspan="2">참조문서</td>
+                     <td class="all_border ta_center" colspan="1">참조문서</td>
                      <td class="all_border" colspan="7">
                         <table class="fixTableWidth" id="tmp_linked_doc">
                            <colgroup>
@@ -586,6 +777,37 @@
                            </tbody>
                         </table>
                      </td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="ta_center" colspan="8" style="margin-bottom: 80px;">
+               <span>
+                  <br />
+                  위 금액을 청구(정산) 합니다.
+               </span>
+               <span>
+                  <br />
+                  작성일자
+               </span>
+            </div>
+            <table class="" style="width:300px; height: 120px;">
+               <colgroup>
+                  <col style="width:80px" />
+                  <col style="width:200px" />
+                  <col style="width:200px" />
+                  <col style="width:200px" />
+               </colgroup>
+               <tbody>
+                  <tr style="height: 40px !important;">
+                     <td class="border1 ta_center" rowspan="2">재<br />무<br />회<br />계</td>
+                     <td class="border1 ta_center">담 당</td>
+                     <td class="border1 ta_center">팀장</td>
+                     <td class="border1 ta_center">본 부장</td>
+                  </tr>
+                  <tr>
+                     <td class="ta_center" style="border: 1px solid black;"></td>
+                     <td class="ta_center" style="border: 1px solid black;"></td>
+                     <td class="ta_center" style="border: 1px solid black;"></td>
                   </tr>
                </tbody>
             </table>
@@ -612,7 +834,7 @@
             </table>
         </div> -->
 
-      <div style="margin-top:10px">
+      <!-- <div style="margin-top:10px">
          <table border="1" class="fixTableWidth" id="tmp_agree" style="height:100%; width:100%">
             <colgroup>
                <col style="width: 44px;" />
@@ -630,7 +852,7 @@
                </tr>
             </thead>
          </table>
-      </div>
+      </div> -->
       <!-- ##CONETENT## -->
       <!-- doc area0 -->
    </div>

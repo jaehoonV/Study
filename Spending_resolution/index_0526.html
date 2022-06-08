@@ -190,7 +190,6 @@
 	.title_field {
 		font-size: 10pt;
 		font-weight: 700;
-		border
 	}
 
 	.input_field {
@@ -336,7 +335,7 @@
 		text-align: center;
 	}
 
-	/*다인 양식*/
+	/* 양식*/
 	.main_title2 {
 		font-size: 25px;
 		color: black;
@@ -405,13 +404,13 @@
 		margin-top: 20px;
 	}
 
-	/*다인 양식*/
+	/* 양식*/
 
 	tr th {
 		display: none;
 	}
 
-	/* TOPEC 지출결의서 추가 양식 */
+	/* 지출결의서 추가 양식 */
 	.bb {
 		border-bottom: 1px solid black;
 		display: inline-block;
@@ -440,7 +439,7 @@
 		padding: 2px 5px;
 	}
 
-	/* TOPEC 지출결의서 추가 양식 */
+	/* 지출결의서 추가 양식 */
 </style>
 <div class="a4 print_wrap" contenteditable="false">
 	<div id="doc_area_0">
@@ -463,7 +462,7 @@
 						<tr>
 							<td class="all_border ta_center" colspan="2" rowspan="3"><span
 									style="display:inline-block; font-size:2rem; margin-bottom:10px">지 출 결 의 서</span><br />
-								<strong style="font-size:1rem; font-weight:700">[ 토펙건축사 ]</strong>
+								<strong style="font-size:1rem; font-weight:700">[ {{회사명}} ]</strong>
 							</td>
 							<td class="all_border ta_center" rowspan="3">담<br />
 								당<br />
@@ -941,10 +940,10 @@ E2240522401</pre>
 						class="bb footerA">작성부서</span>&nbsp;&nbsp;&nbsp;<span class="bb dept_nm footerB"></span><br />
 					<br />
 					<span class="bb footerA">작 성 자</span>&nbsp;&nbsp;&nbsp;<span
-						class="bb footerB tmp_writer">시스템관리자</span><br />
+						class="bb footerB tmp_writer">{{작성자명}}</span><br />
 					<br />
 					<span class="bb footerA">수 령 자</span>&nbsp;&nbsp;&nbsp;<span
-						class="bb footerB org_name1">오일록</span><br />
+						class="bb footerB org_name1">{{수령자명}}</span><br />
 					<br />
 					&nbsp;
 				</div>
