@@ -1,0 +1,888 @@
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<style type="text/css">
+    /* 
+#################################################################
+RESET CSS FOR HTML EDITOR WYSIWYG (What You See Is What You Get)
+################################################################# 
+*/
+
+    html,
+    body {
+        font-size: 100%;
+        font: inherit;
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    sub,
+    sup,
+    tt,
+    var,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    em,
+    strong,
+    b,
+    u,
+    i,
+    strike {
+        border: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    table,
+    tr,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    body {
+        line-height: 1;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    /* END RESET CSS */
+
+
+
+    /*Page Setting Area*/
+    @page a4sheet {
+        size: 21cm 29.7cm;
+    }
+
+    .a4 {
+        page: a4sheet;
+        page-break-after: auto;
+    }
+
+    .print_wrap {
+        min-width: 730px;
+        max-width: 730px;
+        padding: 0 10px 0px;
+    }
+
+    /*Page Setting Area*/
+
+    /*공통 스타일*/
+    body,
+    input,
+    button,
+    textarea,
+    select,
+    td {
+        font-size: 10pt;
+        line-height: 1.4;
+        font-family: 맑은 고딕, 굴림체, 돋움, Arial, Helvetica, Verdana, Sans-Serief;
+        color: #000000;
+    }
+
+    a {
+        text-decoration: none;
+        color: #4d4d4d;
+    }
+
+    a:hover {
+        color: #e06900;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    td {
+        padding: 2px 5px 2px 5px;
+    }
+
+    .b_border {
+        border-width: 0px 0px 1px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .bar_2px {
+        border-width: 0px 0px 2px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        line-height: 1px;
+    }
+
+    .bar_4px {
+        border-width: 0px 0px 4px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+        line-height: 1px;
+    }
+
+    .float-left {
+        float: left;
+        display: inline-block;
+    }
+
+    .float-right {
+        float: right;
+        display: inline-block;
+    }
+
+    /*공통 스타일*/
+
+    /*공문양식일 경우 스타일*/
+    .logo>table {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /*로고영역 테이블 스타일*/
+    .cmp_logo_td {
+        height: 50px;
+        width: 160px;
+    }
+
+    /*로고영역 업체로고*/
+    .cmp_info_td {
+        text-align: right;
+    }
+
+    /*로고영역 업체정보*/
+    .cmp_info_td span {
+        font-weight: 700;
+    }
+
+    /*로고영역 업체정보 강조*/
+    .header>table {
+        width: 100%;
+    }
+
+    /*헤더영역 테이블 스타일*/
+    .header td {
+        height: 30px;
+        vertical-align: middle;
+    }
+
+    /*헤더영역 항목 라인 높이지정*/
+    .h_title_width {
+        width: 100px;
+    }
+
+    /*헤더영역 타이틀영역 넓이지정*/
+    .h_title_field {
+        font-size: 11pt;
+        font-weight: 600;
+    }
+
+    /*헤더영역 타이틀필드*/
+    .h_value_field {
+        font-size: 11pt;
+    }
+
+    /*헤더영역 입력필드*/
+    .contents>table {
+        border: currentColor;
+        border-image: none;
+        width: 100%;
+        height: 600px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-top: 10px;
+    }
+
+    /*컨텐츠영역 테이블 스타일*/
+    .contents td {
+        height: 100%;
+        vertical-align: top;
+        font-size: 12pt;
+        font-family: 굴림체;
+    }
+
+    /*헤더영역 항목 라인 높이지정*/
+    .stamp>table {
+        height: 50px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*직인영역 테이블 스타일*/
+    .stamp_text {
+        height: 30px;
+        text-align: right;
+        padding-top: 0px;
+        font-size: 14.5pt;
+        font-weight: 700;
+    }
+
+    /*직인영역 텍스트 스타일*/
+    .stamp_area {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+    }
+
+    /*공문양식일 경우 스타일*/
+
+    /*Contents Area*/
+    .title_field {
+        font-size: 10pt;
+        font-weight: 600;
+    }
+
+    .title_field2 {
+        font-size: 12pt;
+        font-weight: 700;
+    }
+
+    .input_field {
+        border-width: 1px;
+        border-style: solid;
+        border-color: gold;
+    }
+
+    .value_field {
+        font-size: 10pt;
+        width: 100%;
+    }
+
+    .value_field2 {
+        font-size: 9pt;
+        width: 100%;
+    }
+
+    .contents_field {
+        font-size: 10pt;
+        width: 100%;
+    }
+
+    .value_area {
+        font-size: 10pt;
+        width: 100%;
+        height: 100%;
+    }
+
+    /*Contents Area*/
+
+    /*Approval Info Area*/
+    .ui-wf-per {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .ui-wf-time {
+        padding-left: 2px;
+    }
+
+    .ui-wf-spacer {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    /*Approval Info Area*/
+
+    /*English Font*/
+    .engBL {
+        font-size: 11pt;
+        font-weight: 700;
+        color: #666666;
+    }
+
+    .engBM {
+        font-size: 8pt;
+        font-weight: 700;
+        color: #666666;
+    }
+
+    .engBS {
+        font-size: 6pt;
+        font-weight: 700;
+        color: #666666;
+    }
+
+    .engNL {
+        font-size: 11pt;
+        color: #666666;
+    }
+
+    .engNM {
+        font-size: 8pt;
+        color: #666666;
+    }
+
+    .engNS {
+        font-size: 6pt;
+        color: #666666;
+    }
+
+    /* fix for content_area */
+    #content_area {
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+    }
+
+    /* Template define */
+    /*Title*/
+    .main_title {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 20pt;
+        font-weight: 700;
+        color: #666666;
+    }
+
+    .sub_title {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 11pt;
+        font-weight: 700;
+        color: #666666;
+    }
+
+    .ta_left {
+        text-align: left;
+    }
+
+    .ta_right {
+        text-align: right;
+    }
+
+    .ta_center {
+        text-align: center;
+    }
+
+    .t_border {
+        border-top: 1px;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .b_border {
+        border-top: 0px;
+        border-left: 1px;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .l_border {
+        border-top: 0px;
+        border-left: 1px;
+        border-right: 0px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .r_border {
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 1px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .lr_border {
+        border-top: 0px;
+        border-left: 1px;
+        border-right: 1px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .all_border {
+        border: 1px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .nt_border {
+        border-top: 0px;
+        border-left: 1px;
+        border-right: 1px;
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: rgb(0, 0, 0);
+    }
+
+    .w50 {
+        width: 50px
+    }
+
+    .w100 {
+        width: 100px
+    }
+
+    .w150 {
+        width: 150px
+    }
+
+    .w200 {
+        width: 200px
+    }
+
+    .w250 {
+        width: 250px
+    }
+
+    .w270 {
+        width: 270px
+    }
+
+    .w290 {
+        width: 290px
+    }
+
+    .w300 {
+        width: 300px
+    }
+
+    .w350 {
+        width: 350px
+    }
+
+    .w400 {
+        width: 400px
+    }
+
+    .w450 {
+        width: 450px
+    }
+
+    .w500 {
+        width: 500px
+    }
+
+    .w550 {
+        width: 550px
+    }
+
+    .w600 {
+        width: 600px
+    }
+
+    .w650 {
+        width: 650px
+    }
+
+    .w700 {
+        width: 700px
+    }
+
+    .w750 {
+        width: 750px
+    }
+
+    .ui_tmp_wfuser_sign {
+        width: 50px;
+    }
+
+    /* 모든결재자 싸인 영역 */
+    .ui_tmp_app_sign {
+        width: 50px;
+    }
+
+    /* 모든승인자 싸인 영역 */
+    .ui_tmp_agree_sign {
+        width: 50px;
+    }
+
+    /* 모든협조자 싸인 영역 */
+
+    .salary-table td {
+        height: 20px;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .ui_tmp_salary_user_addr {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: "...";
+    }
+
+    .content {
+        padding-left: 10px;
+    }
+
+    /* 추가 양식 */
+    .t_table {
+        width: 100%;
+        border: 2px solid black;
+    }
+
+    .t_tr>th,
+    .t_tr>td {
+        border: 1px solid black;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .sm_font {
+        font-size: 12px;
+    }
+
+
+    /*
+#################################################################
+사용자 정의 양식 Extradata 필수 항목 (Hidden 컬럼으로 존재.)
+dbdata_input_area1  :  프로젝트코드                                                            tmp_pjt_cd
+dbdata_input_area2  :  문서번호                                                                tmp_doc_no
+dbdata_input_area3  :  문서제목                                                                tmp_doc_title
+dbdata_input_area4  :  작성자, 보낸사람 (Step1 문서작성자)                                     tmp_doc_writer_name
+dbdata_input_area5  :  작성일자 (Step1 문서작성일자)                                           tmp_doc_date
+dbdata_input_area6  :  발행일자, 시행일자, 통보일자 (Step1 문서발송일자)                       tmp_send_date
+dbdata_input_area7  :  회신기한, 처리기한 (Step1 문서 회신기한)                                tmp_required_date
+dbdata_text_area9   :  상위문서 (PMIS상 상위문서)                                              tmp_ref_doc_no_00
+dbdata_text_area10  :  관련문서 (사용자 지정 관련문서)                                         tmp_linked_doc_id_0
+
+사용자 정의 양식 Extradata 고정 항목 (문서양식에 설정. 문서에 필요없을 경우 사용하지 않음.)
+dbdata_input_area8  :  Step2 담당자, 처리자 (Step2 문서작성자 혹은 입력컬럼)
+dbdata_input_area9  :  Step2 처리일자 (Step2 문서작성일자 혹은 입력컬럼)
+dbdata_input_area10 :  Step2 승인자, 확인자 (Step2 최종승인자)
+dbdata_input_area11 :  Step2 승인일자, 확인일자 (Step2 최종승인일자 혹은 입력컬럼)
+dbdata_common_code10:  Step2 최종처리결과 (합격/불합격, 승인/반려, 승인/조건부승인/반려 등)
+dbdata_input_area12 :  Step3 담당자, 처리자 (Step2 문서작성자)
+dbdata_input_area13 :  Step3 처리일자 (Step2 문서작성일자 혹은 입력컬럼)
+dbdata_input_area14 :  Step3 승인자, 확인자 (Step2 최종승인자)
+dbdata_input_area15 :  Step3 승인일자, 확인일자 (Step2 최종승인일자 혹은 입력컬럼)
+dbdata_common_code9 :  Step3 최종처리결과 (합격/불합격, 승인/반려, 승인/조건부승인/반려 등)
+
+사용자 정의 양식 사용자정의 Data 컬럼 (사용자가 문서양식에 맞추어 저장할 필요가 있을경우 설정)
+dbdata_input_area16 ~ 30:  일반항목 저장컬럼
+dbdata_text_area1 ~ 9   :  Text데이터 저장컬럼
+dbdata_common_code1 ~ 8 :  공통코드데이터 저장컬럼
+dbdata_number_area1 ~ 20:  숫자데이터 저장컬럼
+#################################################################
+*/
+</style>
+
+<div class="print_wrap a4" contenteditable="false">
+    <div style="margin:15px;">&nbsp;</div>
+
+    <div style="margin: 15px 10px; text-align: center;"><span
+            style="font-family:malgun gothic,맑은 고딕,sans-serif; text-decoration:underline;"><strong
+                style="font-size:24px;">근 로 계 약 서 (본사)</strong></span></div>
+
+    <p><span class="title_field"><span
+                style="font-family:malgun gothic,맑은 고딕,sans-serif; font-size:14px; text-decoration:underline;">{{회사명}}의
+                대표이사 {{이름}}</span></span><span style="font-family:malgun gothic,맑은 고딕,sans-serif"> <span
+                class="value_field">(이하 "갑"이라 한다)와 <br />
+                <span class="title_field tmp_salary_user_name">{{이름}}</span>(이하 "을"이라 한다)는(은) 신의와 성실을 바탕으로, 다음과 같이
+                근로계약을 체결한다. </span></span></p>
+
+    <table class="t_table" style="width:100%;">
+        <tr class="t_tr" style="background-color: #dfdede;">
+            <th style="width: 70px;">직군</th>
+            <th style="width: 70px;">직급</th>
+            <th style="width: 90px;">생년월일</th>
+            <th style="width: 90px;">입사일자</th>
+            <th style="width: 120px;">소속본부</th>
+            <th style="width: 200px;">근무부서</th>
+            <th>담당업무</th>
+        </tr>
+        <tr class="t_tr">
+            <td class="ta_center"><span class="tmp_salary_job_kind_nm value_field">직종</span></td>
+            <td class="ta_center"><span class="tmp_salary_job_posi_nm value_field">직급</span></td>
+            <td class="ta_center"><span class="tmp_salary_social_number value_field">생년</span></td>
+            <td class="ta_center"><span class="tmp_salary_join_date value_field">입사일자</span></td>
+            <td class="ta_center"><span class="tmp_salary_on_obs_nm value_field">소속</span></td>
+            <td class="ta_center"><span class="tmp_salary_dept_nm value_field">부서</span></td>
+            <td class="ta_center"><span class="tmp_salary_etc value_field">업무</span></td>
+        </tr>
+    </table>
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif"><br />
+        <span class="title_field">제1조 (계약기간)</span>
+    </span>
+    <div class="content value_field">
+        ① "을"의 계약기간은
+        <span class="tmp_salary_start_salary">111111</span>부터 기간의 정함이 없음<br />
+        단, "을"이 특정용역에 배치된 경우에는 "갑"과 "을"의 합의 없이는 근로계약을 해지(사직)할 수 없으며, 일방적인 근로 계약 해지로 인해
+        발생된 손해에 대하여는 제 7조(손해배상)에 따른다.
+    </div>
+
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제2조 (근로시간 및 휴게)</span>
+    </span>
+    <div class="content value_field">
+        ① "갑"의 업무상 필요하다고 인정할 경우에는 "을"과 협의 후 관계사에 전보 등을 명 할 수 있다.<br />
+        ② "을"의 근로시간은 1주 40시간, 1일 8시간을 기준근로시간으로 하며, 연장근로는 사전 동의 한 것으로 한다.<br />
+        ③ "을"의 지군근로시간은 09:00 ~ 18:00로 하고, 휴게(중식)시간은 11:45 ~ 12:45 (1시간)로 한다.<br />
+        <span style="color: red;">④ "을"의 연장근로시간은 월 46시간 이내로 하고, 이에 대하여는 연장근로수당을 일괄 직급한다.</span><br />
+    </div>
+
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제3조 (임금의 구성항목 및 계산방법)</span>
+    </span>
+    <div class="content value_field">
+        ① "을"이 상근으로 직무를 수행 할 경우 연간 수령할 연봉총액은 다음과 같다.
+        <span style="text-decoration: underline"><span class="tmp_salary_salary">연봉총액</span></span><br />
+        ② 연봉 초액에는 기본급, 식대보조, 직무수당, 상근수당, 직책수당, 특별수당, 연장근로수당 및 법정수당을 포괄하여 산정한 것으로 하며
+        <span style="font-size: 14px;">위 연봉총액의 1/12을 균등하게 분할하여 매월 급여를 익월 5일에 지급한다.<br />단, 수습기간 ( ) 로 정한다.</span><br />
+        ③ 월 급여의 구성항목 및 계산방법은 아래와 같다.(단, 근로시간은 월 209시간([8h*5일+8h]*(4.3452주/월))을 기준으로 함)
+        </span>
+
+        <table class="t_table" style="width:100%;">
+            <tr class="t_tr" style="background-color: #dfdede;">
+                <th colspan="4">기 본 급 여</th>
+                <th colspan="3">부 가 급 여</th>
+                <th>월 급 여</th>
+            </tr>
+            <tr class="t_tr" style="height: 40px; background-color: #dfdede;">
+                <th style="width: 80px;">기 본 급</th>
+                <th style="width: 80px;">식대보조</th>
+                <th style="width: 80px;">직무수당</th>
+                <th style="width: 80px;">상근수당</th>
+                <th style="width: 100px;">직책수당</th>
+                <th style="width: 80px;">특별수당</th>
+                <th style="width: 100px;">
+                    <span style="color: red; font-size: 11px;">연장근로수당<br /><span
+                            style="font-size: 9px;">(통상임금/209*1.5*46hr)</span></span>
+                </th>
+                <th>총&nbsp;&nbsp;&nbsp;&nbsp;액</th>
+            </tr>
+            <tr class="t_tr">
+                <td class="ta_right"><span class="tmp_salary_basic_pay">111</span></td>
+                <td class="ta_right"><span class="tmp_salary_meal_pay">222</span></td>
+                <td class="ta_right"><span class="tmp_salary_pos_pay">333</span></td>
+                <td class="ta_right"><span class="tmp_salary_fulltime_pay">444</span></td>
+                <td class="ta_right"><span class="tmp_salary_posi_pay">555</span></td>
+                <td class="ta_right"><span class="tmp_salary_spe_pay">666</span></td>
+                <td class="ta_right"><span class="tmp_salary_overtime_pay" style="color: red;">777</span></td>
+                <td class="ta_right"><span class="tmp_salary_total1">888</span></td>
+            </tr>
+        </table>
+
+        <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+            가. 식대보조(급식비)는 임직원으로서 직무를 수행 할 경우 월 10만원의 식대보조(급식비)를 지급한다.<br />
+            나. 직무수당은 근로시간에 직무를 수행 할 경우에 지급한다 (기본급의 40%) (단, 재택대기자 지급 제외)<br />
+            다. 상급수당은 근로시간에 상근으로 근무 할 경우에 지급한다 (기본급의 60%) (단, 재택대기자 지급 제외)<br />
+            라. 직책수당은 주어진 직책(<span style="color: red;">본부장/소장/팀장 등</span>), 직무를 수행함에 있어 근무상황에 따라 부가급여로 지급한다.<br />
+            마. 특별수당은 직무수행함에 있어 특별한 경우에 근무상황에 따라 한시적으로 특별수당을 추가로 지급한다.<br />
+            바. 연장근로수당은
+            <span style="color: red;">월 46시간 이내의 추가근무(연장근로시간)수당을</span>
+            지급한다.
+        </span>
+    </div>
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제4조 (휴일, 연차 및 퇴직급여)</span>
+        휴일, 연차 및 퇴직급여는 근로기준법 및 근로자퇴직급여보장법에 따른다.
+    </span>
+    <br />
+
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제5조 (안전관리)</span>
+        "을"은 "갑"이 정한 안전에 대한 제 규칙과 안전관리 지시사항을 준수하여야 한다.<br />
+        &nbsp;&nbsp;제반 규칙과 지시 사항을 "을"이 위반하여 발생한 사고에 대하여는 "을"의 귀책사유로 본다.
+    </span>
+    <br />
+
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제6조 (누설금지 등)</span>
+    </span>
+    <div class="content value_field">
+        ① "을"은 본인의 급여는 물론, 다른 직원의 급여에 대하여 회사 내외에 발성하여서는 아니 되며, 본 계약과 관련하여
+        <br />향후에도 금품 등 추가청구를 하지 아니하며, 어떤 민&#183;형사상의 이의도 제기하지 아니한다.
+        <br />
+        ② "을"은 품위유지에 특별히 유념하여, 업무수행 중에 접하게 되는 제반 기밀사항이나, 회사에 불이익을 가져올 일체의
+        <br />언행을 하여서는 아니 되며, 퇴직 후에도 그 의무를 준수하여야 한다.
+    </div>
+
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제7조 (손해배상)</span>
+        "을"이 고의나 중대한 과실로 "갑"에게 재산상의 손해를 끼쳤을 경우에는 "을"과 "을"의 보증인이
+        <br />&nbsp;&nbsp;연대하여 이를 배상하여야 한다.
+    </span>
+    <br />
+
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제8조 (재해보상)</span>
+        "을"이 업무상 재해를 당하였을 때에는 근로기준법 또는 산업재해보상보험법에 따라 보상토록 한다.<br />&nbsp;&nbsp;
+        다만, "을"의 고의나 과실 또는 업무 이외의 사유로 발생한 재해에 대하여는 "갑"이 책임지지 아니한다.
+    </span>
+    <br />
+
+    <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+        <span class="title_field">제9조 (기타)</span>
+        본 계약에 정함이 없는 사항은 취업규칙과 근로기준법 및 일반관례에 따른다.
+    </span>
+
+    <div style="text-align:center; font-size: 13px; margin-top: 15px;">
+        <span style="font-family:malgun gothic,맑은 고딕,sans-serif">
+            계약일자 <span style="margin-left: 20px;">2020-20-20</span>
+        </span>
+    </div>
+
+    <table style="display:inline-block; height:140px; width:330px;">
+        <colgroup>
+            <col style="width:90px" />
+            <col style="width:240px" />
+        </colgroup>
+        <tbody>
+            <tr style="height: 35px !important;">
+                <td class="border1 ta_center" style="font-size: 15px; font-weight:600; text-decoration: underline;">"갑"
+                </td>
+                <td class="border1 ta_left sm_font"></td>
+            </tr>
+            <tr style="height: 35px !important;">
+                <td class="border1 ta_right sm_font">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소 : </td>
+                <td class="border1 ta_left sm_font">{{주소}}}</td>
+            </tr>
+            <tr style="height: 35px">
+                <td class="border1 ta_right sm_font">회&nbsp;&nbsp;사&nbsp;&nbsp;명 : </td>
+                <td class="border1 ta_left sm_font">{{회사명}}</td>
+            </tr>
+            <tr style="height: 35px">
+                <td class="border1 ta_right sm_font">대표이사 : </td>
+                <td class="border1 ta_left sm_font">{{이름}} &nbsp;&nbsp;&nbsp;(인)
+                    <div class="stamp_text_area" style="position: relative;">
+                        <div class="stamp_area"
+                            style="left: 72px; top: -35px; display: block; position: absolute; z-index: 1;"><span
+                                style="font-family:malgun gothic,맑은 고딕,sans-serif">sign</span></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="display:inline-block; left:140px; top:3px; position:relative">
+        <table style="height:140px; width:330px;">
+            <colgroup>
+                <col style="width:90px" />
+                <col style="width:240px" />
+            </colgroup>
+            <tbody>
+                <tr style="height: 35px !important;">
+                    <td class="border1 ta_center" style="font-size: 15px; font-weight:600; text-decoration: underline;">
+                        "을"</td>
+                    <td class="border1 ta_left sm_font"></td>
+                </tr>
+                <tr style="height: 35px !important;">
+                    <td class="border1 ta_right sm_font">주&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소 :
+                    </td>
+                    <td class="border1 ta_left sm_font"><span class="tmp_salary_addr value_field">주소</span></td>
+                </tr>
+                <tr style="height: 35px">
+                    <td class="border1 ta_right sm_font">생&nbsp;년&nbsp;월&nbsp;일 : </td>
+                    <td class="border1 ta_left sm_font"><span class="tmp_salary_social_number value_field">생년월일</span>
+                    </td>
+                </tr>
+                <tr style="height: 35px">
+                    <td class="border1 ta_right sm_font">성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명 : </td>
+                    <td class="border1 ta_left sm_font">
+                        <span class="tmp_salary_user_name">{{이름}}</span> &nbsp;&nbsp;&nbsp;(인)
+                        <div class="" style="position: absolute; left: 80px; top: 60px; display: block;">
+                            <span class="tmp_salary_user_sign value_field"></span>
+                            <span class="tmp_agree_date" data-mask="y-m-d"
+                                style="left:75px;top:35px;position:absolute;color:rgba(182,40,10,1);width:100px;font-size:9pt;color:#e01f1f;display:block;">sign</span>
+                    </td>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div style="margin-bottom: 50px; text-align: center;">
+    <div style="display:inline-block; left: 230px; position:relative">
+        <span style="font-weight: 600; font-size: 12px">근로계약서수령 확인 (인)</span>
+    </div>
+    <div>로고이미지 영역</div>
+</div>
+
+
+
+</div>
