@@ -22,7 +22,10 @@ $("#mainGrid").jqGrid({
    sortable : true, // colmodel 에기능을 사용하려 true 설정
    multiselect : true, // 그리드 왼쪽부분에 셀렉트 박스가 생겨 다중선택이 가능해진다. 
    emptyrecode : "작성된 글이 없습니다.", // 뿌려줄 데이터가 없을 경우 보여줄 문자열 지정 
-   rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정 
+   rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+   cellEdit : false, // 셀 편집 여부 true 설정시 onSelectRow 이벤트를 사용할 수 없으며 마우스 hover를 사용할 수 없다.
+   shrinkToFit : true, // width부분 조정해주는 옵션, true일 경우 width가 자동으로 조정됨
+   gridview : true, // 데이터 읽어들이는 속도 향상 단, treeGrid, subGrid와 afterInsertRow 이벤트를 사용할 수 없다.
 });
 ```
 |옵션|설명|
@@ -99,5 +102,15 @@ onRightClickRow : function(rowid, iRow, iCol, e){ // 마우스 우클릭 했을�
  onCellSelect : function(rowid, iCol, cellcontent, e){// cell 즉 column 선택을 처리하기위해 사용되는 이벤트 (cell 식별 시 사용) 
    // rowid : id of the row , iCol : index of the cell
    // cellcontent : content of the cell , e : event object 
+ },
+```
+```
+ afterEditCell : function(rowid, cellname, value, iRow, iCol){// 편집 가능한 셀에만 적용, 편집 후 발생하는 이벤트
+   // rowid : id of the row , iCol : index of the cell 
+ },
+```
+```
+ afterSaveCell : function(rowid, name, value, iRow, iCol){// 편집 가능한 셀에만 적용, 셀이 성공적으로 저장된 후 발생하는 이벤트
+   // rowid : id of the row , iCol : index of the cell 
  },
 ```
