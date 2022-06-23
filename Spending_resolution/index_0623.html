@@ -1,0 +1,402 @@
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">/*Page Setting Area*/
+@page a4sheet{size:21cm 29.7cm;}
+.a4{page:a4sheet;page-break-after:auto;}
+/* .print_wrap{min-width:730px; max-width:730px; padding:0 15px 20px;} */
+.print_wrap{min-width:730px; max-width:730px; padding:0 15px 20px; margin-left:0px;}/*펨코는 양식을 left로 보기를 원함.*/
+/*Page Setting Area*/
+
+/*공통 스타일*/
+body, input, button, textarea, select {
+	font-size:9pt;
+	line-height:1.2;
+	font-family:맑은 고딕, 돋움, Arial, Helvetica, Verdana, sans-serif;
+	color:black;
+}
+a{text-decoration:none; color:#4d4d4d;}
+a:hover{color:#e06900;}
+table{border-collapse:collapse; border-spacing:0;}
+td{padding:3px 5px 2px 5px;}
+div, span{word-break:break-all;}
+.b_border{border-width:0px 0px 1px; border-style:solid; border-color:rgb(200, 200, 200);}
+.bar_2px{border-width:0px 0px 2px; border-style:solid; border-color:rgb(180, 180, 180); line-height:1px;}
+.bar_4px{border-width:0px 0px 4px; border-style:solid; border-color:rgb(180, 180, 180); line-height:1px;}
+.float-left{float:left;display:inline-block;}
+.float-right{float:right;display:inline-block;}
+/*공통 스타일*/
+
+/*공문양식일 경우 스타일*/
+.logo > table{margin-top:10px; width:100%;} /*로고영역 테이블 스타일*/
+.cmp_logo_td{height:60px; width:600px;} /*로고영역 업체로고*/
+.cmp_info_td{vertical-align:bottom; text-align:right;} /*로고영역 업체정보*/
+.cmp_info_td span{font-weight:700;} /*로고영역 업체정보 강조*/
+.header > table{margin-top:10px; width:100%;} /*헤더영역 테이블 스타일*/
+/* .header td{height:30px;vertical-align: top;} /*헤더영역 항목 라인 높이지정*/ */
+.header td{height:30px;vertical-align: middle;} /*헤더영역 항목 라인 높이지정*/
+.h_title_width{width:100px;} /*헤더영역 타이틀영역 넓이지정*/
+.h_title_field{font-size:11pt; font-weight:700;} /*헤더영역 타이틀필드*/
+.h_value_field{font-size:11pt; } /*헤더영역 입력필드*/
+.contents > table{border:currentColor; border-image:none; width:100%; height:450px; padding-right:15px; padding-left:15px; margin-top:10px;} /*컨텐츠영역 테이블 스타일*/
+.contents td{height:100%; vertical-align:top; font-size:12pt; font-family:굴림체;} /*헤더영역 항목 라인 높이지정*/
+.stamp > table{height:50px; margin-top:15px; margin-bottom:15px; margin-left:auto; margin-right:auto;} /*직인영역 테이블 스타일*/
+.stamp_text{height:70px; text-align:center; padding-top:15px; font-size:20.5pt; font-weight:700;} /*직인영역 텍스트 스타일*/
+.stamp_area{width:80px; height:80px; text-align:center;}
+/*공문양식일 경우 스타일*/
+
+/*Contents Area*/
+.title_field{font-size:10pt; font-weight:700; border}
+.input_field{border-width:1px; border-style:solid; border-color:gold;}
+.value_field{font-size:9pt; width:100%;}
+.value_area{font-size:9pt; width:100%; min-height:100%;}
+.contents_td{vertical-align:top; padding:5px 7px 5px 5px;} /*contents_td에 height는 각 td에 style로 직접 설정. style height 적용 시 해당 td사이즈가 미세하게 틀어짐*/
+/*Contents Area*/
+
+/*Approval Info Area*/
+.ui-wf-per{padding-left: 2px;padding-right: 2px;}
+.ui-wf-time{padding-left: 2px;}
+.ui-wf-spacer{padding-left: 4px;padding-right: 4px;}
+/*Approval Info Area*/
+
+
+/* fix for content_area */
+#content_area{height: 100%; min-height: 100%;width: 100%;}
+
+/* PRINT CSS SECTION */
+@media print {
+	.print_wrap{min-width:730px; max-width:730px; padding:0;}
+	.input_field{border-width: 0;}
+}
+
+/* Template define */
+/*Title*/
+.main_title{margin-top:20px; margin-bottom:15px; font-size:20pt; font-weight:700; color:#666666;}
+.sub_title{margin-top:10px; margin-bottom:5px; font-size:11pt; font-weight:700; color:#666666;}
+.ta_left{text-align:left;}
+.ta_right{text-align:right;}
+.ta_center{text-align:center; vertical-align:middle;}
+.all_border{border: 1px; border-style: solid; border-color:black; height: 25px;}
+.l_border {border-left:1px; border-style: solid; border-color:rgb(200, 200, 200);}
+.r_border {border-right:1px; border-style: solid; border-color:rgb(200, 200, 200);}
+.nt_border{border-top: 0px; border-left: 1px; border-right:1px; border-bottom:1px; border-style: solid; border-color:rgb(200, 200, 200);}
+.nb_border{border-top: 1px; border-left: 1px; border-right:1px; border-bottom:0px; border-style: solid; border-color:rgb(200, 200, 200);}
+.ui_tmp_app_sign .ui_tmp_agree_sign {width:60px;}
+.approval_wrapper .ui_tmp_app_sign{height:70px;}
+.approval_wrapper tbody td{text-align:center;}
+/*양식*/
+.main_title2{font-size:25px; color:black;margin-bottom:15px;margin-top:15px;}
+.app_font{font-size:8px;}
+.bottom_title{font-size:15px; font-weight:bold; color:black;}
+.corner_all{border-top:1px; border-left:1px; border-right:1px; border-bottom:1px; border-style:solid; border-color:black;}
+.t_border {border-top: 1px; border-left: 0px; border-right:0px; border-bottom:1px; border-style: solid; border-color:black;}
+.b_border {border-top: 0px; border-left: 0px; border-right:0px; border-bottom:1px; border-style: solid; border-color:black;}
+.nr_border{border-top: 1px; border-left: 1px; border-right:0px; border-bottom:1px; border-style: solid; border-color:black;}
+.corner_content{border-left:2px; border-top:0px; border-right:2px; border-bottom:2px; border-style:solid; border-color:black;}
+.approval_title{font-weight:bold; text-indent:15px; margin-top:20px;}
+/*양식*/
+
+tr th{display:none;}
+
+/* 지출결의서 추가 양식 */
+.bb {
+		border-bottom: 1px solid black;
+		display: inline-block;
+	}
+.border1 {
+      border: 1px;
+      border-style: solid;
+      border-color: black;
+      height: 20px;
+   }
+.footerA {
+	width: 80px; 
+	text-align: center;
+	font-size: 1rem;
+}
+.footerB {
+	width: 160px; 
+	text-align: center;
+	font-size: 1rem;
+}
+
+td {
+    padding: 2px 5px;
+}
+/* 지출결의서 추가 양식 */
+
+</style>
+<div class="a4 print_wrap" contenteditable="false">
+	<div id="doc_area_0">
+		<div class="main_title2 ta_center"><span></span></div>
+
+		<div class="header">
+			<div class="corner_all">
+				<table class="fixTableWidth" style="width:728px">
+					<colgroup>
+						<col style="width:174px" />
+                 	 	<col style="width:174px" />
+                  		<col style="width:20px" />
+                  		<col style="width:72px" />
+                  		<col style="width:72px" />
+                  		<col style="width:72px" />
+                  		<col style="width:72px" />
+                  		<col style="width:72px" />
+					</colgroup>
+					<tbody>
+					<tr>
+                     <td class="all_border ta_center" rowspan="3" colspan="2">
+						<span style="font-size: 2rem; display: inline-block; margin-bottom: 10px;">지 출 결 의 서</span><br />
+						<span style="font-size: 1rem; font-weight: 700;">[ <span class="acc_type_nm"></span> ]</span>
+					 </td>
+                     <td class="all_border ta_center" rowspan="3">담<br />당<br />부<br />서</td>
+                     <td class="all_border ta_center tmp_app_posi_1">&nbsp;</td>
+                     <td class="all_border ta_center tmp_app_posi_2">&nbsp;</td>
+                     <td class="all_border ta_center tmp_app_posi_3">&nbsp;</td>
+                     <td class="all_border ta_center tmp_app_posi_4">&nbsp;</td>
+                     <td class="all_border ta_center tmp_app_posi_5">&nbsp;</td>
+                  	</tr>
+					<tr style="height: 60px;">
+						<td class="all_border tmp_app_sign_1 ui_tmp_app_sign">&nbsp;</td>
+                     	<td class="all_border tmp_app_sign_2 ui_tmp_app_sign">&nbsp;</td>
+                     	<td class="all_border tmp_app_sign_3 ui_tmp_app_sign">&nbsp;</td>
+                     	<td class="all_border tmp_app_sign_4 ui_tmp_app_sign">&nbsp;</td>
+                     	<td class="all_border tmp_app_sign_5 ui_tmp_app_sign">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="all_border ta_center"><span class="app_font tmp_app_date tmp_app_date_1 ui_tmp_app_date" data-mask="y-m-d"></span><br />
+							<span class="app_font tmp_app_name tmp_app_name_1 ui_tmp_app_name"></span></td>
+						<td class="all_border ta_center"><span class="app_font tmp_app_date tmp_app_date_2 ui_tmp_app_date" data-mask="y-m-d"></span><br />
+							<span class="app_font tmp_app_name tmp_app_name_2 ui_tmp_app_name"></span></td>
+						<td class="all_border ta_center"><span class="app_font tmp_app_date tmp_app_date_3 ui_tmp_app_date" data-mask="y-m-d"></span><br />
+							<span class="app_font tmp_app_name tmp_app_name_3 ui_tmp_app_name"></span></td>
+						<td class="all_border ta_center"><span class="app_font tmp_app_date tmp_app_date_4 ui_tmp_app_date" data-mask="y-m-d"></span><br />
+							<span class="app_font tmp_app_name tmp_app_name_4 ui_tmp_app_name"></span></td>
+						<td class="all_border ta_center"><span class="app_font tmp_app_date tmp_app_date_5 ui_tmp_app_date" data-mask="y-m-d"></span><br />
+							<span class="app_font tmp_app_name tmp_app_name_5 ui_tmp_app_name"></span></td>
+					</tr>
+					<tr>
+						<td class="all_border ta_center" colspan="1">품&nbsp;의&nbsp;번&nbsp;호</td>
+						<td class="all_border" colspan="7"><span class="tmp_doc_no"></span></td>
+						<!-- <td class="all_border" colspan="6"><span style="vertical-align:middle"></span></td> -->
+					</tr>
+					<!-- <tr>
+						<td class="all_border ta_center" colspan="2">신&nbsp;청&nbsp;부&nbsp;서</td>
+						<td class="all_border" colspan="3"><span class="tmp_doc_writer_dept_nm" style="vertical-align:middle"></span></td>
+						<td class="all_border ta_center">신&nbsp;&nbsp;&nbsp;청&nbsp;&nbsp;&nbsp;자</td>
+						<td class="all_border" colspan="3"><span class="tmp_doc_writer_name" style="vertical-align:middle"></span></td>
+					</tr> -->
+					<tr>
+						<td class="all_border ta_center" colspan="1">제&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;목</td>
+						<td class="all_border" colspan="7"><span class="tmp_doc_title"></span></td>
+					</tr>
+					<tr>
+						<td class="all_border contents_td" colspan="8">
+							<div class="f_field input_field" contenteditable="true" style="font-size:13px; margin-bottom:10px; margin-top:10px;">
+							<span style="border-bottom: 1px double black; border-width: 3px;">&nbsp;세&nbsp;부&nbsp;내&nbsp;역&nbsp;</span>
+							<br /><br /><br /><br />
+							</div>
+
+							<table class="fixTableWidth" id="form2_list" style="width:715px">
+								<colgroup>
+									<col style="width:20px;" />
+									<col style="width:70px;" />
+									<col style="width:80px;" />
+									<col style="width:112px;" />
+									<col style="width:112px;" />
+									<col style="width:112px;" />
+									<col style="width:112px;" />
+									<col style="width:112px;" />
+								</colgroup>
+								<thead>
+								<tr>
+                                 <td class="all_border ta_center" rowspan="2">순<br /><br />번</td>
+                                 <td class="all_border ta_center">계정코드</td>
+                                 <td class="all_border ta_center">계정과목명</td>
+                                 <td class="all_border ta_center">부서코드</td>
+                                 <td class="all_border ta_center">부서명</td>
+                                 <td class="all_border ta_center">프로젝트코드</td>
+                                 <td class="all_border ta_center" colspan="2">프로젝트명</td>
+                              </tr>
+                              <tr>
+                                 <td class="all_border ta_center" colspan="4">
+                                    	적&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;요
+                                 </td>
+                                 <td class="all_border ta_center">공급가액</td>
+                                 <td class="all_border ta_center">세 액</td>
+                                 <td class="all_border ta_center">합 계</td>
+                              </tr>
+                              	<tr class="tmp_headrow_first">
+                              		<th class="tmp_seq">&nbsp;</th>
+                              		<th class="tmp_accounts_cd">&nbsp;</th>
+									<th class="tmp_accounts_nm">&nbsp;</th>
+                                    <th class="tmp_accounts_nm">&nbsp;</th>
+                                    <th class="tmp_accounts_nm">&nbsp;</th>
+                                	<!-- <th class="tmp_issue_dt">&nbsp;</th> -->
+                                	<th class="tmp_pj_no">&nbsp;</th>
+                                 	<th class="tmp_pj_name">&nbsp;</th>
+                                 	<!-- <th class="tmp_full_entprs_nm">&nbsp;</th> -->
+                              	</tr>
+								<tr class="tmp_headrow_second">
+									<th class="tmp_note">&nbsp;</th>
+									<th class="tmp_cost1">&nbsp;</th>
+                                 	<th class="tmp_cost2">&nbsp;</th>
+                                 	<th class="tmp_tot_cost">&nbsp;</th>
+								</tr>
+								<tr class="tmp_sumrow">
+									<th class="tmp_issue_dt">&nbsp;</th>
+									<th class="tmp_cost1">&nbsp;</th>
+									<th class="tmp_cost2">&nbsp;</th>
+									<th class="tmp_tot_cost">&nbsp;</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td class="all_border form2_job_class_nm ta_center">&nbsp;</td>
+									<td class="all_border form2_pay ta_right">&nbsp;</td>
+									<td class="all_border form2_day">&nbsp;</td>
+									<td class="all_border form2_cnt">&nbsp;</td>
+									<td class="all_border form2_tot_cost">&nbsp;</td>
+									<td class="all_border form2_tot_rate">&nbsp;</td>
+									<td class="all_border form2_memo">&nbsp;</td>
+                                    <td class="all_border form2_memo">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="all_border form2_job_class_nm ta_center">&nbsp;</td>
+									<td class="all_border form2_pay ta_right">&nbsp;</td>
+									<td class="all_border form2_day ta_right">&nbsp;</td>
+									<td class="all_border form2_cnt ta_right">&nbsp;</td>
+									<td class="all_border form2_tot_cost ta_right">&nbsp;</td>
+									<td class="all_border form2_tot_rate">&nbsp;</td>
+									<td class="all_border form2_memo">&nbsp;</td>
+                                    <td class="all_border form2_memo">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="all_border form2_job_class_nm ta_center">&nbsp;</td>
+									<td class="all_border form2_pay ta_right">&nbsp;</td>
+									<td class="all_border form2_day ta_right">&nbsp;</td>
+									<td class="all_border form2_cnt ta_right">&nbsp;</td>
+									<td class="all_border form2_tot_cost ta_right">&nbsp;</td>
+									<td class="all_border form2_tot_rate">&nbsp;</td>
+									<td class="all_border form2_memo">&nbsp;</td>
+                                    <td class="all_border form2_memo">&nbsp;</td>
+								</tr>
+								<tr>
+									<td class="all_border form2_job_class_nm ta_center" colspan="5">총합계</td>
+									<td class="all_border form2_day ta_right">&nbsp;</td>
+									<td class="all_border form2_cnt ta_right">&nbsp;</td>
+									<td class="all_border form2_tot_cost ta_right">&nbsp;</td>
+									<!-- <td class="all_border form2_tot_rate ta_right">&nbsp;</td>
+									<td class="all_border form2_memo">&nbsp;</td> -->
+								</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<!-- <tr>
+						<td class="all_border ta_center" colspan="2">참조문서</td>
+						<td class="all_border" colspan="7">
+							<table class="fixTableWidth" id="tmp_linked_doc">
+								<colgroup>
+									<col style="width:100px;" />
+									<col />
+								</colgroup>
+								<thead>
+								<tr style="display:none;">
+									<th class="tmp_linked_doc_id">&nbsp;</th>
+									<th class="tmp_linked_doc_title">&nbsp;</th>
+								</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</td>
+					</tr> -->
+					</tbody>
+				</table>
+			<div class="ta_center" colspan="8" style="margin-bottom: 5px;">
+               <span style="font-size: 1rem">
+                  <br />
+                  	위 금액을 청구(정산) 합니다.
+               </span>
+               <span class="write_date">
+                  	작성일자
+               </span>
+            </div>
+            <table class="" style="display: inline-block; width: 260px; height: 120px;">
+               <colgroup>
+                  <col style="width:70px" />
+                  <col style="width:190px" />
+                  <col style="width:190px" />
+                  <col style="width:190px" />
+               </colgroup>
+               <tbody>
+                  <tr style="height: 40px !important;">
+                     <td class="border1 ta_center" rowspan="2">재<br />무<br />회<br />계</td>
+                     <td class="border1 ta_center">담 당</td>
+                     <td class="border1 ta_center">팀장</td>
+                     <td class="border1 ta_center">본 부장</td>
+                  </tr>
+                  <tr style="height: 80px">
+                     <td class="border1 ta_center" ></td>
+                     <td class="border1 ta_center" ></td>
+                     <td class="border1 ta_center" ></td>
+                  </tr>
+               </tbody>
+            </table>
+            <div style="display: inline-block; position: relative; left: 165px;">
+                <span class="bb footerA">작성부서</span>&nbsp;&nbsp;&nbsp;<span class="bb footerB dept_nm" >&nbsp;</span>
+				<br />
+				<br />
+				<span class="bb footerA">작  성  자</span>&nbsp;&nbsp;&nbsp;<span class="bb footerB tmp_writer" >&nbsp;</span>
+				<div class="tmp_app_sign_0 ui_tmp_app_sign" style="display:inline-block; position:absolute; left: 210px; width: 60px">&nbsp;</div>
+				<br />
+				<br />
+				<span class="bb footerA">수  령  자</span>&nbsp;&nbsp;&nbsp;<span class="bb footerB org_name1" >수령자명</span>
+				<br />
+				<br />
+				<br />
+            </div>
+         </div>
+      </div>
+		<!-- header -->
+
+		<!-- <div style="margin-top:10px">
+            <table class="fixTableWidth" style="width:300px; float:right;">
+                <colgroup>
+                    <col style="width:100px;" />
+                    <col style="width:100px;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <tr>
+                    <td class="all_border ta_center" style="height:20px;">담당</th>
+                    <td class="all_border ta_center" style="height:20px;">팀장</th>
+                    <td class="all_border ta_center" style="height:20px;">실장</th>
+                </tr>
+                <tr>
+                    <td class="all_border" style="height:60px;">&nbsp;</td>
+                    <td class="all_border" style="height:60px;">&nbsp;</td>
+                    <td class="all_border" style="height:60px;">&nbsp;</td>
+                </tr>
+            </table>
+        </div> -->
+        
+        <!-- <div style="margin-top:10px">
+		<table border="1" class="fixTableWidth" id="tmp_agree" style="height:100%; width:100%">
+			<colgroup>
+				<col style="width: 44px;" />
+				<col style="width: 40px;" />
+				<col style="width: 40px;" />
+				<col style="width: 220px;" />
+				<col />
+			</colgroup>
+			<thead>
+				<tr style="height:40px">
+					<th class="tmp_agree_name" style="text-align: center;"><span class="title_field">합의자</span></th>
+					<th class="tmp_agree_sign" style="text-align: center;"><span class="title_field">사인</span></th>
+					<th class="tmp_agree_date2" data-mask="y-m-d"><span class="title_field">합의일자</span></th>
+					<th class="tmp_agree_comment"><span class="title_field">합의의견</span></th>
+				</tr>
+			</thead>
+		</table>
+		</div> -->
+		<!-- ##CONETENT## --><!-- doc area0 --></div>
+	<!-- print_wrap --></div>
