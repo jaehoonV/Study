@@ -26,6 +26,7 @@ $("#mainGrid").jqGrid({
    cellEdit : false, // 셀 편집 여부 true 설정시 onSelectRow 이벤트를 사용할 수 없으며 마우스 hover를 사용할 수 없다.
    shrinkToFit : true, // width부분 조정해주는 옵션, true일 경우 width가 자동으로 조정됨
    gridview : true, // 데이터 읽어들이는 속도 향상 단, treeGrid, subGrid와 afterInsertRow 이벤트를 사용할 수 없다.
+   loadonce : true // 데이터를 가져오는 방식 (true : 최초 한번) 페이징시 false : 페이지를 이동 할 떄마다 출력할 데이터 Select(페이징)
 });
 ```
 |옵션|설명|
