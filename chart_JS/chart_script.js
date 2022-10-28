@@ -201,3 +201,106 @@ const chart5_config = {
 const chart5 = new Chart(document.getElementById('chart5'), chart5_config);
 
 /* chart5 end */
+
+/* chart6 */
+function random_data_for_bubble(cnt){
+    let output_data = [];
+    for(let i = 0; i < cnt; i++){
+        let x = Math.floor(Math.random() * 100);
+        let y = Math.floor(Math.random() * 100);
+        let r = Math.floor(Math.random() * 4);
+        output_data.push({x, y, r});
+    }
+    return output_data;
+}
+
+const chart6_data1 = random_data_for_bubble(500);
+const chart6_data2 = random_data_for_bubble(500);
+
+const chart6_data = {
+    labels:  ['1월', '2월', '3월', '4월', '5월', '6월'],
+    datasets: [
+        {
+            label: 'Dataset 1',
+            data: chart6_data1,
+            borderColor: '#FFB1C1',
+            backgroundColor: '#FFB1C1',
+        },
+        {
+            label: 'Dataset 2',
+            data: chart6_data2,
+            borderColor: '#FFCF9F',
+            backgroundColor: '#FFCF9F',
+        }
+    ]
+};
+
+const chart6_config = {
+    type: 'bubble',
+    data: chart6_data,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart.js Bubble Chart'
+            }
+        }
+    },
+};
+
+const chart6 = new Chart(document.getElementById('chart6'), chart6_config);
+
+/* chart6 end*/
+
+/* chart7 */
+const chart7_data = {
+    labels:  ['activty1', 'activty2', 'activty3', 'activty4', 'activty5', 'activty6'],
+    datasets: [
+        {
+            label: '계획',
+            data: [50,20,30,40,50,60,70,80,60],
+            borderColor: '#DBF2F2',
+            backgroundColor: '#DBF2F2',
+            fill: false,
+        },
+        {
+            label: '실적',
+            data: [40,18,20,40,48,53,66,60,32],
+            borderColor: '#EBE0FF',
+            backgroundColor: '#EBE0FF',
+            fill: false,
+        }
+    ]
+};
+
+const chart7_config = {
+    type: 'bar',
+    data: chart7_data,
+    options: {
+      indexAxis: 'y',
+      // Elements options apply to all of the options unless overridden in a dataset
+      // In this case, we are setting the border of each horizontal bar to be 2px wide
+      elements: {
+        bar: {
+          borderWidth: 2,
+        }
+      },
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'right',
+        },
+        title: {
+          display: true,
+          text: 'Chart.js Horizontal Bar Chart'
+        }
+      }
+    },
+  };
+
+  const chart7 = new Chart(document.getElementById('chart7'), chart7_config);
+/* chart7 end*/
