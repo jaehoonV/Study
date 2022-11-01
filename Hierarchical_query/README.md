@@ -27,7 +27,7 @@ CONNECT BY PRIOR A.ITEM_SEQ = A.UP_ITEM_SEQ
 ORDER BY A.CD;
 ```
 <p align="center"> 
-    <img src="./screenshot.PNG" width="300" />
+    <img src="./screenshot.png" width="300" />
 </p>
 
 ***
