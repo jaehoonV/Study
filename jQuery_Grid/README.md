@@ -22,7 +22,8 @@ $("#mainGrid").jqGrid({
    sortable : true, // colmodel 에기능을 사용하려 true 설정
    multiselect : true, // 그리드 왼쪽부분에 셀렉트 박스가 생겨 다중선택이 가능해진다. 
    emptyrecode : "작성된 글이 없습니다.", // 뿌려줄 데이터가 없을 경우 보여줄 문자열 지정 
-   rownumber : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+   rownumbers : true, // 각 row의 맨 앞줄에 각 행의 번호가 자동으로 부여 되도록 설정
+   rownumWidth: 35, // rownumbers가 true인 경우 각 행의 번호의 너비를 설정(기본값: 25)
    cellEdit : false, // 셀 편집 여부 true 설정시 onSelectRow 이벤트를 사용할 수 없으며 마우스 hover를 사용할 수 없다.
    shrinkToFit : true, // width부분 조정해주는 옵션, true일 경우 width가 자동으로 조정됨
    gridview : true, // 데이터 읽어들이는 속도 향상 단, treeGrid, subGrid와 afterInsertRow 이벤트를 사용할 수 없다.
